@@ -113,7 +113,7 @@ export default function AboutPage() {
               Core stack
             </Typography>
 
-            <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mt: 2 }}>
+            <Stack direction="row" flexWrap="wrap" sx={{ mt: 2, gap: 1 }}>
               {coreStack.map((tech) => (
                 <Chip key={tech} label={tech} />
               ))}

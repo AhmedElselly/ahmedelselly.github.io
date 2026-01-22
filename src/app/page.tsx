@@ -51,7 +51,7 @@ export default function Home() {
             </Link>
 
             <Link href="/contact" style={{ textDecoration: "none" }}>
-              <Button variant="outlined" size="large">
+              <Button variant="outlined" size="large" sx={{ color: "#fff" }}>
                 Contact Me
               </Button>
             </Link>
@@ -106,7 +106,7 @@ export default function Home() {
             real-world conditions — not just look good.
           </Typography>
 
-          <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mt: 3 }}>
+          <Stack direction="row" flexWrap="wrap" sx={{ mt: 3, gap: 1 }}>
             {[
               "Scalable system design",
               "Multi-app ecosystems",
@@ -117,7 +117,9 @@ export default function Home() {
               "Notification infrastructure",
               "Hardware & external integrations",
             ].map((item) => (
-              <Chip key={item} label={item} />
+              <Box sx={{ mt: 2 }}>
+                <Chip key={item} label={item} />
+              </Box>
             ))}
           </Stack>
         </Box>
