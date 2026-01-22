@@ -14,6 +14,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
 const navItems = [
+  { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },

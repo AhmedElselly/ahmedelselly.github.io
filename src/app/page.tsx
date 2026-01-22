@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 export const metadata = {
   title: "Ahmed Elselly | Full-Stack Engineer",
@@ -59,8 +60,39 @@ export default function Home() {
         </Box>
       </Box>
 
+      {/* ================= FOCUS ================= */}
+      <Box sx={{ py: 10, bgcolor: "background.paper" }}>
+        <Box sx={{ maxWidth: 1100, mx: "auto", px: 2 }}>
+          <Typography variant="h3" fontWeight={800}>
+            What I build
+          </Typography>
+
+          <Typography sx={{ mt: 2 }} color="text.secondary" maxWidth={700}>
+            My work focuses on building systems that need to work reliably under
+            real-world conditions — not just look good.
+          </Typography>
+
+          <Stack direction="row" flexWrap="wrap" sx={{ mt: 3, gap: 1 }}>
+            {[
+              "Scalable system design",
+              "Multi-app ecosystems",
+              "Real-time platforms",
+              "Mobile & web applications",
+              "GraphQL & API architecture",
+              "Geolocation systems",
+              "Notification infrastructure",
+              "Hardware & external integrations",
+            ].map((item) => (
+              <Box sx={{ mt: 2 }}>
+                <Chip key={item} label={item} />
+              </Box>
+            ))}
+          </Stack>
+        </Box>
+      </Box>
+
       {/* ================= HIGHLIGHTS ================= */}
-      <Box sx={{ bgcolor: "background.paper", py: 8 }}>
+      <Box sx={{ bgcolor: "background.paper", pb: 8, pt: 0 }}>
         <Box sx={{ maxWidth: 1100, mx: "auto", px: 2 }}>
           <Grid container spacing={3}>
             {[
@@ -94,36 +126,7 @@ export default function Home() {
         </Box>
       </Box>
 
-      {/* ================= FOCUS ================= */}
-      <Box sx={{ py: 10 }}>
-        <Box sx={{ maxWidth: 1100, mx: "auto", px: 2 }}>
-          <Typography variant="h3" fontWeight={800}>
-            What I build
-          </Typography>
-
-          <Typography sx={{ mt: 2 }} color="text.secondary" maxWidth={700}>
-            My work focuses on building systems that need to work reliably under
-            real-world conditions — not just look good.
-          </Typography>
-
-          <Stack direction="row" flexWrap="wrap" sx={{ mt: 3, gap: 1 }}>
-            {[
-              "Scalable system design",
-              "Multi-app ecosystems",
-              "Real-time platforms",
-              "Mobile & web applications",
-              "GraphQL & API architecture",
-              "Geolocation systems",
-              "Notification infrastructure",
-              "Hardware & external integrations",
-            ].map((item) => (
-              <Box sx={{ mt: 2 }}>
-                <Chip key={item} label={item} />
-              </Box>
-            ))}
-          </Stack>
-        </Box>
-      </Box>
+      <TestimonialsSection />
 
       {/* ================= PROJECTS ================= */}
       <Box sx={{ bgcolor: "background.paper", py: 10 }}>
