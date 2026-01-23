@@ -6,7 +6,7 @@ type Props = {
   params: { slug: string };
 };
 
-export default async function ProjectPage({ params }: Props) {
+async function ProjectPage({ params }: Props) {
   const { slug } = await params;
   console.log({ slug });
 
@@ -136,3 +136,11 @@ export default async function ProjectPage({ params }: Props) {
     </Box>
   );
 }
+
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export default ProjectPage;
