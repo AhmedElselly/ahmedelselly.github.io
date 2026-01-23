@@ -100,7 +100,7 @@ export default async function ProjectPage({ params }: Props) {
               <Typography variant="h5" fontWeight={700} sx={{ mt: 4 }}>
                 Key Features
               </Typography>
-              <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mt: 1 }}>
+              <Stack direction="row" flexWrap="wrap" sx={{ mt: 1, gap: 1 }}>
                 {project.features.map((item) => (
                   <Chip key={item} label={item} />
                 ))}
@@ -124,7 +124,7 @@ export default async function ProjectPage({ params }: Props) {
               <Typography variant="h5" fontWeight={600}>
                 Tech stack
               </Typography>
-              <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mt: 1 }}>
+              <Stack direction="row" flexWrap="wrap" sx={{ mt: 1, gap: 1 }}>
                 {project?.tech.map((tech) => (
                   <Chip key={tech} label={tech} />
                 ))}
