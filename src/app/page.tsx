@@ -11,6 +11,7 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import HeaderSection from "@/components/HomeComponents/HeaderSection";
 
 export const metadata = {
   title: "Ahmed Elselly | Full-Stack Engineer",
@@ -22,43 +23,7 @@ export default function Home() {
   return (
     <Box sx={{ bgcolor: "primary.main" }}>
       {/* ================= HERO ================= */}
-      <Box sx={{ py: { xs: 8, md: 14 } }}>
-        <Box sx={{ maxWidth: 1100, mx: "auto", px: 2 }}>
-          <Typography
-            variant="h2"
-            fontWeight={900}
-            sx={{ maxWidth: 900, lineHeight: 1.1 }}
-          >
-            Full-stack engineer building real-world platforms and scalable
-            systems
-          </Typography>
-
-          <Typography
-            sx={{ mt: 3, fontSize: 19, maxWidth: 750 }}
-            color="text.secondary"
-          >
-            I design and build production-grade web and mobile applications with
-            a strong focus on system architecture, real-time behavior, and
-            long-term maintainability. My work includes multi-app ecosystems,
-            dispatch platforms, and complex integrations used in real
-            environments.
-          </Typography>
-
-          <Stack direction="row" spacing={2} sx={{ mt: 4 }}>
-            <Link href="/projects" style={{ textDecoration: "none" }}>
-              <Button variant="contained" size="large">
-                View Projects
-              </Button>
-            </Link>
-
-            <Link href="/contact" style={{ textDecoration: "none" }}>
-              <Button variant="outlined" size="large" sx={{ color: "#fff" }}>
-                Contact Me
-              </Button>
-            </Link>
-          </Stack>
-        </Box>
-      </Box>
+      <HeaderSection />
 
       {/* ================= FOCUS ================= */}
       <Box sx={{ py: 10, bgcolor: "background.paper" }}>
@@ -83,8 +48,8 @@ export default function Home() {
               "Notification infrastructure",
               "Hardware & external integrations",
             ].map((item) => (
-              <Box sx={{ mt: 2 }}>
-                <Chip key={item} label={item} />
+              <Box key={item} sx={{ mt: 2 }}>
+                <Chip label={item} />
               </Box>
             ))}
           </Stack>
@@ -178,13 +143,35 @@ export default function Home() {
             sx={{ mt: 4 }}
           >
             <Link href="/contact" style={{ textDecoration: "none" }}>
-              <Button variant="contained" size="large">
+              <Button
+                variant="contained"
+                size="large"
+                sx={{
+                  bgcolor: "#fff",
+                  color: "primary.main",
+                  "&:hover": {
+                    bgcolor: "primary.main",
+                    color: "#fff",
+                  },
+                }}
+              >
                 Start a conversation
               </Button>
             </Link>
 
             <Link href="/services" style={{ textDecoration: "none" }}>
-              <Button variant="outlined" size="large" sx={{ color: "#fff" }}>
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  color: "#fff",
+                  borderColor: "#fff",
+                  "&:hover": {
+                    borderColor: "#fff",
+                    backgroundColor: "rgba(255,255,255,0.08)",
+                  },
+                }}
+              >
                 View services
               </Button>
             </Link>

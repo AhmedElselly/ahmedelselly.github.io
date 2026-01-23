@@ -15,7 +15,10 @@
     "@mui/material-nextjs": "^7.3.7",
     "next": "16.1.4",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "^3.9.1",
+    "tsparticles-slim": "^2.12.0"
   },
   "devDependencies": {
     "@types/node": "^20",
