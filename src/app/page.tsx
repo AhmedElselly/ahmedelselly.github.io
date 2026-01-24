@@ -31,10 +31,21 @@ export default function Home() {
       {/* ================= FOCUS ================= */}
       <Box id="services" sx={{ py: 10, bgcolor: "background.paper" }}>
         <Box sx={{ maxWidth: 1100, mx: "auto", px: 2 }}>
-          <Typography variant="h3" fontWeight={800}>
-            What I build
-          </Typography>
-
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
+            flexWrap={"wrap"}
+          >
+            <Typography variant="h3" fontWeight={800}>
+              What I build
+            </Typography>
+            <Link href="/services" style={{ textDecoration: "none" }}>
+              <Button variant="text" sx={{ color: "#fff" }}>
+                View all services →
+              </Button>
+            </Link>
+          </Stack>
           <Typography sx={{ mt: 2 }} color="text.secondary" maxWidth={700}>
             My work focuses on building systems that need to work reliably under
             real-world conditions — not just look good.
