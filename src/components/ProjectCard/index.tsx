@@ -53,6 +53,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           href={`/projects/${project.slug}`}
           variant="contained"
           fullWidth
+          sx={{ background: "#fff", color: "primary.main" }}
         >
           View Case Study
         </Button>

@@ -1,6 +1,7 @@
 import { Box, Typography, Grid } from "@mui/material";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
+import HeroParticles from "@/components/HomeComponents/HeroParticles";
 
 export const metadata = {
   title: "Projects | Ahmed Elselly",
@@ -10,8 +11,11 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <Box sx={{ bgcolor: "primary.main" }}>
-      <Box sx={{ maxWidth: 1200, mx: "auto", px: 2, py: 8 }}>
+    <Box sx={{ bgcolor: "primary.main", position: "relative" }}>
+      <HeroParticles />
+      <Box
+        sx={{ maxWidth: 1200, mx: "auto", px: 2, py: 8, position: "relative" }}
+      >
         <Typography variant="h2" fontWeight={700}>
           Projects
         </Typography>
