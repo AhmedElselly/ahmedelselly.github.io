@@ -32,7 +32,7 @@ export type AndroidLinksProps = {
 export const projects: Project[] = [
   {
     slug: "multi-vendor-delivery-platform",
-    title: "Multi-Vendor Delivery Platform",
+    title: "'Orderat' Multi-Vendor Delivery Platform",
     subtitle: "End-to-end ecosystem for customers, businesses, and riders",
     description:
       "A production-grade multi-application delivery platform including customer, business, and rider apps, backed by a real-time GraphQL system.",
