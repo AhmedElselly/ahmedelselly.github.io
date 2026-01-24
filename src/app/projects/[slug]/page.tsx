@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import { Box, Typography, Stack, Chip, Divider, Paper } from "@mui/material";
+import { AndroidAppsSection } from "@/components/ProjectsComponents/AndroidAppsSection";
 
 type Props = {
   params: { slug: string };
@@ -39,6 +40,10 @@ async function ProjectPage({ params }: Props) {
             alt={project?.title}
             sx={{ width: "100%", borderRadius: 3, mt: 4 }}
           />
+
+          {project?.linksAndroid ? (
+            <AndroidAppsSection links={project?.linksAndroid.links} />
+          ) : null}
 
           <Stack spacing={4} sx={{ mt: 6 }}>
             <section>

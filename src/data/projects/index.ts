@@ -13,6 +13,15 @@ export type Project = {
   challenges: string[];
   features: string[];
   screenshots?: string[];
+  linksAndroid?: AndroidLinksProps;
+};
+
+export type AndroidLinksProps = {
+  links?: {
+    customerApp?: string;
+    businessApp?: string;
+    driverApp?: string;
+  };
 };
 
 export const projects: Project[] = [
@@ -65,5 +74,15 @@ export const projects: Project[] = [
       "Geo queries",
     ],
     image: "/projects/orderat_project.png",
+    linksAndroid: {
+      links: {
+        customerApp:
+          "https://play.google.com/store/apps/details?id=com.orderatcustomer.app&hl=en",
+        businessApp:
+          "https://play.google.com/store/apps/details?id=com.orderatbusiness.app",
+        driverApp:
+          "https://play.google.com/store/apps/details?id=com.orderatrider.app",
+      },
+    },
   },
 ];
