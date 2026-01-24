@@ -28,7 +28,7 @@ export default function HeroParticles() {
       background: { color: "transparent" },
       fpsLimit: 60,
       particles: {
-        number: { value: 40, density: { enable: true, area: 800 } },
+        number: { value: 140, density: { enable: true, area: 800 } },
         color: { value: "#ffffff" },
         opacity: { value: 0.25 },
         size: { value: { min: 1, max: 3 } },
