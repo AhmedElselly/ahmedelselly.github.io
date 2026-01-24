@@ -98,7 +98,7 @@ export default function Navbar() {
                 component={Link}
                 href={item.href}
                 fullWidth
-                sx={{ justifyContent: "flex-start", py: 1.2 }}
+                sx={{ justifyContent: "flex-start", py: 1.2, color: "#fff" }}
                 onClick={() => setOpen(false)}
               >
                 {item.label}
