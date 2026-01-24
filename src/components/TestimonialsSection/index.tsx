@@ -4,7 +4,7 @@ import TestimonialCard from "../TestimonialCard";
 
 export default function TestimonialsSection() {
   return (
-    <Box sx={{ py: 10 }}>
+    <Box id="testimonials" sx={{ py: 10 }}>
       <Box sx={{ maxWidth: 1100, mx: "auto", px: 2 }}>
         <Typography variant="h3" fontWeight={800}>
           Client reviews

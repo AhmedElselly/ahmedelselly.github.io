@@ -12,6 +12,7 @@ import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import HeaderSection from "@/components/HomeComponents/HeaderSection";
+import SectionNavigator from "@/components/HomeComponents/SectionNavigator";
 
 export const metadata = {
   title: "Ahmed Elselly | Full-Stack Engineer",
@@ -22,11 +23,13 @@ export const metadata = {
 export default function Home() {
   return (
     <Box sx={{ bgcolor: "primary.main" }}>
+      {/* section navigator */}
+      <SectionNavigator />
       {/* ================= HERO ================= */}
       <HeaderSection />
 
       {/* ================= FOCUS ================= */}
-      <Box sx={{ py: 10, bgcolor: "background.paper" }}>
+      <Box id="services" sx={{ py: 10, bgcolor: "background.paper" }}>
         <Box sx={{ maxWidth: 1100, mx: "auto", px: 2 }}>
           <Typography variant="h3" fontWeight={800}>
             What I build
@@ -94,7 +97,7 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* ================= PROJECTS ================= */}
-      <Box sx={{ bgcolor: "background.paper", py: 10 }}>
+      <Box id="projects" sx={{ bgcolor: "background.paper", py: 10 }}>
         <Box sx={{ maxWidth: 1100, mx: "auto", px: 2 }}>
           <Stack
             direction="row"
@@ -123,7 +126,7 @@ export default function Home() {
       </Box>
 
       {/* ================= CTA ================= */}
-      <Box sx={{ py: 12 }}>
+      <Box id="contact" sx={{ py: 12 }}>
         <Box sx={{ maxWidth: 900, mx: "auto", px: 2, textAlign: "center" }}>
           <Typography variant="h3" fontWeight={900}>
             Have a product to build?

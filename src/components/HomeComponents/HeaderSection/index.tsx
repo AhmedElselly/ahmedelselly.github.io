@@ -7,6 +7,7 @@ import HeroParticles from "../HeroParticles";
 export default function HeaderSection() {
   return (
     <Box
+      id="hero"
       sx={{
         position: "relative",
         overflow: "hidden",
