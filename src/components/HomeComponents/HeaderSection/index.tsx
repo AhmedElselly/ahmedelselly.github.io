@@ -31,7 +31,19 @@ export default function HeaderSection() {
         <Typography
           variant="h2"
           fontWeight={900}
-          sx={{ maxWidth: 900, lineHeight: 1.1 }}
+          sx={{
+            maxWidth: 900,
+            fontSize: {
+              xs: "2.1rem", // mobile
+              sm: "2.6rem", // small tablets
+              md: "3.4rem", // laptops
+              lg: "3.8rem", // desktop
+            },
+            lineHeight: {
+              xs: 1.25,
+              md: 1.15,
+            },
+          }}
         >
           Full-stack engineer building real-world platforms and scalable systems
         </Typography>
