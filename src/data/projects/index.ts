@@ -4,7 +4,11 @@ export type Project = {
   subtitle: string;
   description: string;
   problem: string;
-  ecommerceProblems: string[];
+  ecommerceProblems?: string[];
+  thermalPrinting?: {
+    problem: string;
+    solution: string[];
+  };
   solution: string;
   impact: string[];
   tech: string[];
@@ -59,6 +63,18 @@ export const projects: Project[] = [
       "Handling edge cases like business edits, recalculations, and customer approval flows",
       "Synchronizing cart, checkout, and order state across customer, business, and rider apps",
     ],
+    thermalPrinting: {
+      problem:
+        "- Businesses needed to print Arabic receipts on low-cost thermal printers that did not support UTF-8 or advanced formatting. Standard libraries failed to render Arabic text correctly or handle logo and image printing from a mobile environment.",
+
+      solution: [
+        "Researched ESC/POS protocol limitations and printer-specific command sets",
+        "Implemented Arabic text reshaping and bidirectional rendering before printing",
+        "Built an image-based receipt rendering pipeline to bypass unsupported encodings",
+        "Handled PNG processing, rasterization, and memory-safe transmission from React Native",
+        "Integrated thermal printing directly into the business app without relying on a backend service",
+      ],
+    },
     features: [
       "Live order tracking",
       "Rider dispatch system",
