@@ -37,7 +37,7 @@ export function AndroidAppsSection({ links }: AndroidLinksProps) {
 
         {links.driverApp && (
           <AppLinkCard
-            title="Rider app"
+            title="Driver app"
             subtitle="Delivery & dispatch operations"
             url={links.driverApp}
           />
