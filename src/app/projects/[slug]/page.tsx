@@ -31,8 +31,8 @@ async function ProjectPage({ params }: Props) {
             fontWeight={700}
             sx={{
               fontSize: {
-                xs: "2.1rem", // mobile
-                sm: "2.6rem", // small tablets
+                xs: "1.5rem", // mobile
+                sm: "2.1rem", // small tablets
               },
             }}
           >
