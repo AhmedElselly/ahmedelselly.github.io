@@ -4,6 +4,7 @@ export type Project = {
   subtitle: string;
   description: string;
   problem: string;
+  ecommerceProblems: string[];
   solution: string;
   impact: string[];
   tech: string[];
@@ -43,12 +44,20 @@ export const projects: Project[] = [
       "Geo-based order assignment and tracking",
       "Push notification infrastructure (FCM)",
     ],
+
     challenges: [
       "Designing reliable real-time order state synchronization",
       "Handling geolocation and distance-based queries",
       "Ensuring notification delivery and retry strategies",
       "Keeping business edits and order recalculations consistent",
       "Supporting Arabic printing and special hardware integrations",
+    ],
+    ecommerceProblems: [
+      "Designing a reliable cart system that supports multi-vendor items, pricing rules, and order validation",
+      "Building a consistent order placement flow between frontend and backend to prevent price manipulation and stale totals",
+      "Implementing delivery fee calculation logic based on distance, zones, and business rules",
+      "Handling edge cases like business edits, recalculations, and customer approval flows",
+      "Synchronizing cart, checkout, and order state across customer, business, and rider apps",
     ],
     features: [
       "Live order tracking",

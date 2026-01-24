@@ -101,6 +101,25 @@ async function ProjectPage({ params }: Props) {
               </ul>
             </section>
 
+            <Divider sx={{ my: 6 }} />
+
+            {project.ecommerceProblems?.length && (
+              <section>
+                <Typography variant="h5" fontWeight={700}>
+                  E-commerce problems solved
+                </Typography>
+
+                <ul>
+                  {project.ecommerceProblems.map((item) => (
+                    <li key={item}>
+                      <Typography>{item}</Typography>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            <Divider sx={{ my: 6 }} />
             <section>
               <Typography variant="h5" fontWeight={700} sx={{ mt: 4 }}>
                 Key Features
