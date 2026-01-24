@@ -26,7 +26,16 @@ async function ProjectPage({ params }: Props) {
         }}
       >
         <Paper sx={{ p: { xs: 3, md: 5 }, borderRadius: 4 }}>
-          <Typography variant="h3" fontWeight={700}>
+          <Typography
+            variant="h3"
+            fontWeight={700}
+            sx={{
+              fontSize: {
+                xs: "2.1rem", // mobile
+                sm: "2.6rem", // small tablets
+              },
+            }}
+          >
             {project?.title}
           </Typography>
 
